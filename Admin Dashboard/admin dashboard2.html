@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ADMIN DASHBOARD</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logoharvestssquare.png"/>
+</head>
+<body>
+    <!-- start & loading screen -->
+    <div id="startsc" class="n">
+        <div class="startsc">
+            <div class="cen">
+                <h2>Selamat Datang Di Admin Dashboard</h2>
+                <h4>Gereja Utusan Pantekosta "Harvest"</h4>
+                <br><br>
+                <div class="loading"></div>
+                <h4 id="starttext">load Data</h4>
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingsc" class="n">
+        <div class="loadingsc">
+            <div class="cen">
+                <h2>Admin Dashboard</h2>
+                <br><br>
+                <div class="loading"></div>
+                <h4 id="loadingtext">Tunggu Sebentar</h4>
+            </div>
+        </div>
+    </div>
+
+    <img src="img/gereja/WhatsApp Image 2023-11-10 at 22.17.28.jpeg" alt="bacground" class="bgf">
+
+    <div class="content n" id="content">
+        <!-- <header>
+            <img src="img/gereja/WhatsApp Image 2023-11-10 at 22.17.28.jpeg" alt="header">
+        </header> -->
+        <div class="" id="pass_form">
+        <div class="full">
+            <div class="full2">
+                <div class="top">
+                    <div>
+                        <h1>Admin Dashboard</h1>
+                        <h3>Verifikasi Identitas</h3>
+                    </div>
+                </div>
+                <div class="bd">
+                    <form id="formp">
+                        <div>
+                            <br><br>
+                            <label class="lb"><h4>Password: </h4></label>
+                            <input type="text" class="inp"
+                            id="passi"
+                            placeholder="Masukan Password"
+                            maxlength="20" 
+                            minlength="5"
+                            pattern="[a-zA-Z 0-9]*" 
+                            required 
+                            autocomplete="off"
+                            oninvalid="this.setCustomValidity('Password Tidak Sesuai Peraturan')"
+                            oninput="this.setCustomValidity('')"><br>
+                            <h4 class="text salah" id="textp"></h4>
+                            <input type="submit" class="sub">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="n" id="editing_form">
+        <div class="full">
+            <div class="full2">
+                <div class="top">
+                    <div>
+                        <h1>Admin Dashboard</h1>
+                        <h3>Update Trending</h3>
+                    </div>
+                </div>
+                <div class="bd">
+                    <div>
+                        <br>
+                        <label class="lb2"><h4>Warta Terbaru: </h4></label>
+                        <input type="text" 
+                        class="inp2" 
+                        id="wtinp"
+                        maxlength="3" 
+                        minlength="3"
+                        placeholder="Masukan Kode Item ( G01 / G02 / G03 / G04 / G05 / G06 )"
+                        required 
+                        autocomplete="off"
+                        oninvalid="this.setCustomValidity('Isi Input Tidak Sesuai Peraturan')"
+                        oninput="this.setCustomValidity('')"><br>
+                        <input type="submit" class="sub" onclick="wt_function()">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fullv2">
+            <div class="full2v2">
+                <div class="top">
+                    <div>
+                        <h1>Admin Dashboard</h1>
+                        <h3>Preview & Code Item</h3>
+                    </div>
+                </div>
+                <div class="bd">
+                        <div>
+                            <br>
+
+                            <div class="ff">
+                                <div class="ming" title="G01" onclick="mingf('minggu04')" draggable="false">
+                                    <div>
+                                        <div class="" id="ming04id">
+                                            <img src="" alt="gambar minggu 04" draggable="false" id="gambar04">
+                                            <h3 draggable="false" id="nama04">???</h3>
+                                            <p draggable="false" id="url04">???</p>
+                                            <p draggable="false" id="url204">???</p>
+                                            <h3 draggable="false" id="title04">???</h3>
+                                        </div>
+                                        <h2 class="n" id="h204id">G01</h2>
+                                    </div>
+                                </div>
+                                <div class="ming" title="G02" onclick="mingf('minggu1')" draggable="false">
+                                    <div>
+                                        <div class="" id="ming1id">
+                                            <img src="" alt="gambar minggu 1" draggable="false" id="gambar1">
+                                            <h3 draggable="false" id="nama1">???</h3>
+                                            <p draggable="false" id="url1">???</p>
+                                            <p draggable="false" id="url21">???</p>
+                                            <h3 draggable="false" id="title1">???</h3>
+                                        </div>
+                                        <h2 class="n" id="h21id">G02</h2>
+                                    </div>
+                                </div>
+                                <div class="ming" title="G03" onclick="mingf('minggu2')" draggable="false">
+                                    <div>
+                                        <div class="" id="ming2id">
+                                            <img src="" alt="gambar minggu 2" draggable="false" id="gambar2">
+                                            <h3 draggable="false" id="nama2">???</h3>
+                                            <p draggable="false" id="url2">???</p>
+                                            <p draggable="false" id="url22">???</p>
+                                            <h3 draggable="false" id="title2">???</h3>
+                                        </div>
+                                        <h2 class="n" id="h22id">G03</h2>
+                                    </div>
+                                </div>
+                                <div class="ming" title="G04" onclick="mingf('minggu3')" draggable="false">
+                                    <div>
+                                        <div class="" id="ming3id">
+                                            <img src="" alt="gambar minggu 3" draggable="false" id="gambar3">
+                                            <h3 draggable="false" id="nama3">???</h3>
+                                            <p draggable="false" id="url3">???</p>
+                                            <p draggable="false" id="url23">???</p>
+                                            <h3 draggable="false" id="title3">???</h3>
+                                        </div>
+                                        <h2 class="n" id="h23id">G04</h2>
+                                    </div>
+                                </div>
+                                <div class="ming" title="G05" onclick="mingf('minggu4')" draggable="false">
+                                    <div>
+                                        <div class="" id="ming4id">
+                                            <img src="" alt="gambar minggu 4" draggable="false" id="gambar4">
+                                            <h3 draggable="false" id="nama4">???</h3>
+                                            <p draggable="false" id="url4">???</p>
+                                            <p draggable="false" id="url24">???</p>
+                                            <h3 draggable="false" id="title4">???</h3>
+                                        </div>
+                                        <h2 class="n" id="h24id">G05</h2>
+                                    </div>
+                                </div>
+                                <div class="ming" title="G06" onclick="mingf('minggu5')" draggable="false">
+                                    <div>
+                                        <div class="" id="ming5id">
+                                            <img src="" alt="gambar minggu 5" draggable="false" id="gambar5">
+                                            <h3 draggable="false" id="nama5">???</h3>
+                                            <p draggable="false" id="url5">???</p>
+                                            <p draggable="false" id="url25">???</p>
+                                            <h3 draggable="false" id="title5">???</h3>
+                                        </div>
+                                        <h2 class="n" id="h25id">G06</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="n" id="editing">
+                                <div class="top2">
+                                    <div>
+                                        <h1>Board Editing</h1>
+                                        <h3 id="judul">Minggu 1</h3>
+                                    </div>
+                                </div>
+
+                                <div class="edit">
+                                    <label class="lb2"><h4>Judul Warta: </h4></label>
+
+                                    <div class="inpcen">
+                                        <input type="text" class="inp2" id="namainp" placeholder="Masukan Nama" autocomplete="off">
+                                        <br>
+                                    </div>
+
+                                    <label class="lb2"><h4>Thumbnail: </h4></label>
+
+                                    <div class="inpcen">
+                                        <img src="" class="imgd" id="gambard">
+                                        <br>
+                                    </div>
+                                    <div class="inpcen">
+                                        <input type="file" accept="image/*" class="inp2" id="gambarinp" autocomplete="off">
+                                        <br>
+                                    </div>
+
+                                    <label class="lb2"><h4>Link Pertama: </h4></label>
+
+                                    <div class="inpcen">
+                                        <input type="text" class="inp2" id="urlinp" placeholder="Masukan Url" autocomplete="off">
+                                        <br>
+                                    </div>
+
+                                    <label class="lb2">
+                                        <h4>Link Kedua: </h4>
+                                    </label>
+
+                                    <div class="inpcen">
+                                        <input type="text" class="inp2" id="url2inp" placeholder="Masukan Url2" autocomplete="off">
+                                        <br>
+                                    </div>
+
+                                    <label class="lb2">
+                                        <h4>Judul Thumbnail: </h4>
+                                    </label>
+
+                                    <div class="inpcen">
+                                        <input type="text" class="inp2" id="titleinp" placeholder="Masukan Jusul/Title" autocomplete="off">
+                                        <br>
+                                    </div>
+                                <button class="sub" onclick="submit_editing()">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="" id="tutor_form">
+            <div class="fullv3">
+                <div class="full2v3">
+                    <div class="top">
+                        <div>
+                            <h1>Admin Dashboard</h1>
+                            <h3>Tutorial</h3>
+                        </div>
+                    </div>
+                    <div class="bd">
+                        <form id="formp">
+                            <div>
+                                <br>
+                                <div class="tutor">
+                                    <div class="" id="tut1">
+                                        <h2>Verifikasi Identitas</h2>
+                                        <div class="garis"><div class="garis2"></div></div>
+
+                                        <img src="img/tutorial/Step1.png" alt="Verifikasi Identitas Tutorial Image" draggable="false"><br><br>
+                                        <p>hal pertama yang harus dilakukan adalah memasukan password pada kolom Verifikasi Identitas.
+                                            diharapkan anda memasukan yang benar!. kode/password hanya diketahui admin/orang tertentu.
+                                        </p>
+                                    </div>
+                                    <div class="n" id="tut2">
+                                        <h2>Editing</h2>
+                                        <div class="garis"><div class="garis2"></div></div>
+
+                                        <img src="img/tutorial/Step2.png" alt="Update Trending Tutorial Image" draggable="false"><br><br>
+                                        <p>Update Trending adalah warta yang baru baru ini muncul.
+                                            cara memperbaruinya dengan mengisi kolom Update Trending
+                                            anda bisa memasukan kode: <br>
+                                            G01 = minggu ke 1 <br>
+                                            G02 = minggu ke 2 <br>
+                                            G03 = minggu ke 3 <br>
+                                            G04 = minggu ke 4 <br>
+                                            G05 = minggu ke 5 <br>
+                                            G06 = minggu ke 6</p>
+                                        <br><br><br><br>
+
+                                        <img src="img/tutorial/Step3.png" alt="Preview & Code Item Tutorial Image" draggable="false"><br><br>
+                                        <p>Preview & Code Item adalah kumpulan beberapa warta dan kode.
+                                            pilih kotak/minggu/kode yang anda mau rubah.</p>
+                                        <br><br><br><br>
+
+                                        <img src="img/tutorial/Step4.png" alt="Board Edit Tutorial Image" draggable="false"><br><br>
+                                        <p>Board Edit adalah tempat dimana admin bisa memperbarui / memperbaiki warta.
+                                            kolom (Judul Warta) kalian bisa isi dengan judul warta tersebut. <br>
+                                            seperti (WARTA GEREJA MINGGU 14 JANUARI 2024).
+                                            <br> <br>
+                                            kolom (Thumbnail) kalian bisa isi dengan gambar tersebut. <br>
+                                            klik tombol pilih file/choose file, lalu pilih gambar yang ingin anda jadikan Thumbnail. <br>
+                                            seperti (Sample.png/Sample.jpeg)
+                                            <br> <br>
+                                            kolom (Link Pertama) kalian bisa isi dengan link semat item warta tersebut. <br>
+                                            seperti (https://drive.google.com/file/d/19-fBG_fueatRsdISXe3hGO4W6_wRlvah/preview).
+                                            <br> <br>
+                                            kolom (Link Kedua) kalian bisa isi dengan link semat item warta tersebut. <br>
+                                            seperti (https://drive.google.com/file/d/19-fBG_fueatRsdISXe3hGO4W6_wRlvah/preview).
+                                            <br> <br>
+                                            kolom (Judul Thumbnail) kalian bisa isi dengan judul thumnail warta yang berguna untuk memperjelas thumnail tersebut. <br>
+                                            seperti (14 JAN 2024) isi dengan tanggal atau yang lain.
+                                        </p>
+
+                                        <br><br><br><br>
+                                        <img src="img/tutorial/Semat Item.png" alt="Preview & Code Item Tutorial Image" draggable="false"><br><br>
+                                        <p>kami harap anda memasukan link (semat item) bukan (link drive).
+                                            langkah utama yang harus anda lakukan untuk mengambil link semat iitem adalah klik titik 3,
+                                            lalu klik sematkan item
+                                        </p>
+
+                                        <br><br><br><br>
+                                        <img src="img/tutorial/Semat Item2.png" alt="Preview & Code Item Tutorial Image" draggable="false"><br><br>
+                                        <p>setelah itu pilih link.
+                                            seperti pada contoh diatas select biru.
+                                            lalu copy dan tempel pada kolom link admin dashboard yang anda inginkan.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="database.js"></script>
+    <script src="sistem.js"></script>
+    <script src="index.js"></script>
+    <script>
+        var firebase_data_script;const firebaseConfig = {apiKey: "AIzaSyDGekJTeEJscUiN1y7NPNKCuC65WFfipJM",authDomain: "gup-harvest.firebaseapp.com",databaseURL: "https://gup-harvest-default-rtdb.firebaseio.com",projectId: "gup-harvest",storageBucket: "gup-harvest.appspot.com",messagingSenderId: "512729674455",appId: "1:512729674455:web:c6ed645e4f5356af363692",measurementId: "G-5MJ30QJ6CS"};firebase.initializeApp(firebaseConfig);const database = firebase.database();const myRef = database.ref('warta');const storage = firebase.storage();const storageRef = storage.ref("images");
+
+        // Mendapatkan data dari Firebase
+        myRef.once('value')
+        .then((snapshot) => {
+            const data = snapshot.val();
+            load_data(data);
+        })
+        .catch((error) => {
+            console.error("Error getting data:", error);
+        });
+
+        function call_load() {
+            myRef.once('value')
+            .then((snapshot) => {
+                const data = snapshot.val();
+                // console.log("data: ", data);
+                // console.log("data GUP: ", database_gup);
+                load_data(data);
+            })
+            .catch((error) => {
+                console.error("Error getting data:", error);
+            });
+        }
+
+        const wtinp = document.getElementById("wtinp");
+        function wt_function() {
+            if(wtinp.value) {
+                if( wtinp.value.length == 3 && wtinp.value !== database_gup.json.warta_terbaru)
+                {
+                    loadingscreen_start();
+                    //mengganti data baru ke database gup
+                    database_gup.json.warta_terbaru = wtinp.value;
+                    // console.error('Tidak ada file yang dipilih.');
+                    database.ref("warta/json/warta_terbaru").set(database_gup.json.warta_terbaru)
+                    .then(() => {
+                        console.log('Nilai pada warta terbaru berhasil diperbarui!');
+                        alert("warta terbaru berhasil di perbarui");
+                        //load data
+                        call_load();
+                        loadingscreen_stop();
+                    })
+                }
+            }
+        }
+
+
+        function submit_editing() {
+            loadingscreen_start();
+            if(editinglet == 'minggu04') {
+                //mengganti data baru ke database gup
+                database_gup.json.minggu04.nama = namainp.value;
+                database_gup.json.minggu04.url = urlinp.value;
+                database_gup.json.minggu04.url2 = url2inp.value;
+                database_gup.json.minggu04.title = titleinp.value;
+
+                let file = gambarinp.files[0];
+                if (file) {
+                    const storage = firebase.storage();
+                    const storageRef = storage.ref('images/' + file.name);
+                    const uploadTask = storageRef.put(file);
+                
+                    uploadTask.on('state_changed',
+                        (snapshot) => {
+                            // Menangani perubahan status pengunggahan (optional)
+                        },
+                        (error) => {
+                            console.error('Gagal mengunggah gambar:', error);
+                            loadingscreen_stop();
+                        },
+                        () => {
+                            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+                                console.log('Berhasil mengunggah gambar. URL:', downloadURL);
+                                database_gup.json.minggu04.gambar = file.name;
+
+                                database.ref("warta/json/minggu04").set(database_gup.json.minggu04)
+                                .then(() => {
+                                    console.log('Nilai pada child berhasil diperbarui!');
+                                    // console.log(file.name);
+                                    alert("warta berhasil di perbarui");
+                                    //load data
+                                    call_load();
+                                    loadingscreen_stop();
+                                })
+                                .catch((error) => {
+                                    console.error('Gagal memperbarui nilai pada child:', error);
+                                    loadingscreen_stop();
+                                });
+
+                            });
+                        }
+                    );
+                } else {
+                    // console.error('Tidak ada file yang dipilih.');
+                    database.ref("warta/json/minggu04").set(database_gup.json.minggu04)
+                    .then(() => {
+                        console.log('Nilai pada child berhasil diperbarui!');
+                        alert("warta berhasil di perbarui");
+                        //load data
+                        call_load();
+                        loadingscreen_stop();
+                    })
+                    .catch((error) => {
+                        console.error('Gagal memperbarui nilai pada child:', error);
+                        loadingscreen_stop();
+                    });
+                }
+            }
+            else if(editinglet == 'minggu1') {
+                //mengganti data baru ke database gup
+                database_gup.json.minggu1.nama = namainp.value;
+                database_gup.json.minggu1.url = urlinp.value;
+                database_gup.json.minggu1.url2 = url2inp.value;
+                database_gup.json.minggu1.title = titleinp.value;
+
+                let file = gambarinp.files[0];
+                if (file) {
+                    const storage = firebase.storage();
+                    const storageRef = storage.ref('images/' + file.name);
+                    const uploadTask = storageRef.put(file);
+                
+                    uploadTask.on('state_changed',
+                        (snapshot) => {
+                            // Menangani perubahan status pengunggahan (optional)
+                        },
+                        (error) => {
+                            console.error('Gagal mengunggah gambar:', error);
+                            loadingscreen_stop();
+                        },
+                        () => {
+                            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+                                console.log('Berhasil mengunggah gambar. URL:', downloadURL);
+                                database_gup.json.minggu1.gambar = file.name;
+
+                                database.ref("warta/json/minggu1").set(database_gup.json.minggu1)
+                                .then(() => {
+                                    console.log('Nilai pada child berhasil diperbarui!');
+                                    // console.log(file.name);
+                                    alert("warta berhasil di perbarui");
+                                    //load data
+                                    call_load();
+                                    loadingscreen_stop();
+                                })
+                                .catch((error) => {
+                                    console.error('Gagal memperbarui nilai pada child:', error);
+                                    loadingscreen_stop();
+                                });
+
+                            });
+                        }
+                    );
+                } else {
+                    // console.error('Tidak ada file yang dipilih.');
+                    database.ref("warta/json/minggu1").set(database_gup.json.minggu1)
+                    .then(() => {
+                        console.log('Nilai pada child berhasil diperbarui!');
+                        alert("warta berhasil di perbarui");
+                        //load data
+                        call_load();
+                        loadingscreen_stop();
+                    })
+                    .catch((error) => {
+                        console.error('Gagal memperbarui nilai pada child:', error);
+                        loadingscreen_stop();
+                    });
+                }
+            }
+            else if(editinglet == 'minggu2') {
+                //mengganti data baru ke database gup
+                database_gup.json.minggu2.nama = namainp.value;
+                database_gup.json.minggu2.url = urlinp.value;
+                database_gup.json.minggu2.url2 = url2inp.value;
+                database_gup.json.minggu2.title = titleinp.value;
+
+                let file = gambarinp.files[0];
+                if (file) {
+                    const storage = firebase.storage();
+                    const storageRef = storage.ref('images/' + file.name);
+                    const uploadTask = storageRef.put(file);
+                
+                    uploadTask.on('state_changed',
+                        (snapshot) => {
+                            // Menangani perubahan status pengunggahan (optional)
+                        },
+                        (error) => {
+                            console.error('Gagal mengunggah gambar:', error);
+                            loadingscreen_stop();
+                        },
+                        () => {
+                            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+                                console.log('Berhasil mengunggah gambar. URL:', downloadURL);
+                                database_gup.json.minggu2.gambar = file.name;
+
+                                database.ref("warta/json/minggu2").set(database_gup.json.minggu2)
+                                .then(() => {
+                                    console.log('Nilai pada child berhasil diperbarui!');
+                                    // console.log(file.name);
+                                    alert("warta berhasil di perbarui");
+                                    //load data
+                                    call_load();
+                                    loadingscreen_stop();
+                                })
+                                .catch((error) => {
+                                    console.error('Gagal memperbarui nilai pada child:', error);
+                                    loadingscreen_stop();
+                                });
+
+                            });
+                        }
+                    );
+                } else {
+                    // console.error('Tidak ada file yang dipilih.');
+                    database.ref("warta/json/minggu2").set(database_gup.json.minggu2)
+                    .then(() => {
+                        console.log('Nilai pada child berhasil diperbarui!');
+                        alert("warta berhasil di perbarui");
+                        loadingscreen_stop();
+                        //load data
+                        call_load();
+                    })
+                    .catch((error) => {
+                        console.error('Gagal memperbarui nilai pada child:', error);
+                        loadingscreen_stop();
+                    });
+                }
+            }
+            else if(editinglet == 'minggu3') {
+                //mengganti data baru ke database gup
+                database_gup.json.minggu3.nama = namainp.value;
+                database_gup.json.minggu3.url = urlinp.value;
+                database_gup.json.minggu3.url2 = url2inp.value;
+                database_gup.json.minggu3.title = titleinp.value;
+
+                let file = gambarinp.files[0];
+                if (file) {
+                    const storage = firebase.storage();
+                    const storageRef = storage.ref('images/' + file.name);
+                    const uploadTask = storageRef.put(file);
+                
+                    uploadTask.on('state_changed',
+                        (snapshot) => {
+                            // Menangani perubahan status pengunggahan (optional)
+                        },
+                        (error) => {
+                            console.error('Gagal mengunggah gambar:', error);
+                            loadingscreen_stop();
+                        },
+                        () => {
+                            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+                                console.log('Berhasil mengunggah gambar. URL:', downloadURL);
+                                database_gup.json.minggu3.gambar = file.name;
+
+                                database.ref("warta/json/minggu3").set(database_gup.json.minggu3)
+                                .then(() => {
+                                    console.log('Nilai pada child berhasil diperbarui!');
+                                    // console.log(file.name);
+                                    alert("warta berhasil di perbarui");
+                                    //load data
+                                    call_load();
+                                    loadingscreen_stop();
+                                })
+                                .catch((error) => {
+                                    console.error('Gagal memperbarui nilai pada child:', error);
+                                    loadingscreen_stop();
+                                });
+
+                            });
+                        }
+                    );
+                } else {
+                    // console.error('Tidak ada file yang dipilih.');
+                    database.ref("warta/json/minggu3").set(database_gup.json.minggu3)
+                    .then(() => {
+                        console.log('Nilai pada child berhasil diperbarui!');
+                        alert("warta berhasil di perbarui");
+                        //load data
+                        call_load();
+                        loadingscreen_stop();
+                    })
+                    .catch((error) => {
+                        console.error('Gagal memperbarui nilai pada child:', error);
+                        loadingscreen_stop();
+                    });
+                }
+            }
+            else if(editinglet == 'minggu4') {
+                //mengganti data baru ke database gup
+                database_gup.json.minggu4.nama = namainp.value;
+                database_gup.json.minggu4.url = urlinp.value;
+                database_gup.json.minggu4.url2 = url2inp.value;
+                database_gup.json.minggu4.title = titleinp.value;
+
+                let file = gambarinp.files[0];
+                if (file) {
+                    const storage = firebase.storage();
+                    const storageRef = storage.ref('images/' + file.name);
+                    const uploadTask = storageRef.put(file);
+                
+                    uploadTask.on('state_changed',
+                        (snapshot) => {
+                            // Menangani perubahan status pengunggahan (optional)
+                        },
+                        (error) => {
+                            console.error('Gagal mengunggah gambar:', error);
+                            loadingscreen_stop();
+                        },
+                        () => {
+                            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+                                console.log('Berhasil mengunggah gambar. URL:', downloadURL);
+                                database_gup.json.minggu4.gambar = file.name;
+
+                                database.ref("warta/json/minggu4").set(database_gup.json.minggu4)
+                                .then(() => {
+                                    console.log('Nilai pada child berhasil diperbarui!');
+                                    // console.log(file.name);
+                                    alert("warta berhasil di perbarui");
+                                    //load data
+                                    call_load();
+                                    loadingscreen_stop();
+                                })
+                                .catch((error) => {
+                                    console.error('Gagal memperbarui nilai pada child:', error);
+                                    loadingscreen_stop();
+                                });
+
+                            });
+                        }
+                    );
+                } else {
+                    // console.error('Tidak ada file yang dipilih.');
+                    database.ref("warta/json/minggu4").set(database_gup.json.minggu4)
+                    .then(() => {
+                        console.log('Nilai pada child berhasil diperbarui!');
+                        alert("warta berhasil di perbarui");
+                        //load data
+                        call_load();
+                        loadingscreen_stop();
+                    })
+                    .catch((error) => {
+                        console.error('Gagal memperbarui nilai pada child:', error);
+                        loadingscreen_stop();
+                    });
+                }
+            }
+            else if(editinglet == 'minggu5') {
+                //mengganti data baru ke database gup
+                database_gup.json.minggu5.nama = namainp.value;
+                database_gup.json.minggu5.url = urlinp.value;
+                database_gup.json.minggu5.url2 = url2inp.value;
+                database_gup.json.minggu5.title = titleinp.value;
+
+                let file = gambarinp.files[0];
+                if (file) {
+                    const storage = firebase.storage();
+                    const storageRef = storage.ref('images/' + file.name);
+                    const uploadTask = storageRef.put(file);
+                
+                    uploadTask.on('state_changed',
+                        (snapshot) => {
+                            // Menangani perubahan status pengunggahan (optional)
+                        },
+                        (error) => {
+                            console.error('Gagal mengunggah gambar:', error);
+                            loadingscreen_stop();
+                        },
+                        () => {
+                            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+                                console.log('Berhasil mengunggah gambar. URL:', downloadURL);
+                                database_gup.json.minggu5.gambar = file.name;
+
+                                database.ref("warta/json/minggu05").set(database_gup.json.minggu05)
+                                .then(() => {
+                                    console.log('Nilai pada child berhasil diperbarui!');
+                                    // console.log(file.name);
+                                    alert("warta berhasil di perbarui");
+                                    //load data
+                                    call_load();
+                                    loadingscreen_stop();
+                                })
+                                .catch((error) => {
+                                    console.error('Gagal memperbarui nilai pada child:', error);
+                                    loadingscreen_stop();
+                                });
+
+                            });
+                        }
+                    );
+                } else {
+                    // console.error('Tidak ada file yang dipilih.');
+                    database.ref("warta/json/minggu05").set(database_gup.json.minggu05)
+                    .then(() => {
+                        console.log('Nilai pada child berhasil diperbarui!');
+                        alert("warta berhasil di perbarui");
+                        //load data
+                        call_load();
+                        loadingscreen_stop();
+                    })
+                    .catch((error) => {
+                        console.error('Gagal memperbarui nilai pada child:', error);
+                        loadingscreen_stop();
+                    });
+                }
+            }
+        }
+    </script>
+</body>
+</html>

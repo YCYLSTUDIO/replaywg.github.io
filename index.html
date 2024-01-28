@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="theme-color" content="#2c2c2c"/>
+    <title>GUP Harvest</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="icon/logoharvestssquare.png"/>
+    <link rel="stylesheet" href="js & css/index.css">
+</head>
+<!-- gup -->
+<body id="ldbg"> 
+    <div class="bgre n" id="bgre">
+        <div class="ktkr" id="ktkr">
+            <div class="topr">
+                <img src="icon/close.png" alt="close" class="closer" onclick="close_login()">
+            </div>
+            <h1 class="jdre">Login</h1><br><br>
+            <div class="np">
+                <div class="icondiv">
+                    <img src="icon/login-avatar.png" alt="nama" class="iconl" draggable="false">
+                </div>
+                <input type="text" class="npinp" placeholder="Username" maxlength="20" id="namainp">
+            </div><br>
+            <!-- <div class="np">
+                <div class="icondiv">
+                    <img src="icon/envelope.png" alt="nama" class="iconl" draggable="false">
+                </div>
+                <input type="text" class="npinp" placeholder="Gmail" maxlength="64" id="namainp">
+            </div><br> -->
+            <div class="np">
+                <div class="icondiv">
+                    <img src="icon/key.png" alt="password" class="iconl2" draggable="false">
+                </div>
+                <input type="password" class="npinp2" placeholder="Password" id="npinp22" maxlength="25" draggable="false">
+                <div class="passdiv" onclick="pass()">
+                    <img src="icon/eye.png" alt="passimg" class="passimg2" id="passimg" draggable="false">
+                </div>
+            </div><br>
+            <p class="pembsb" id="pembsb"></p>
+            <div class="nps" id="nps" onclick="get_send_func()">
+                <h2>Login</h2>
+            </div>
+            <!-- <p class="note">Note: <br> diusahakan untuk pengguna tidak memakai password asli</p> -->
+            <p class="note">Note: <br> Pastikan anda sudah mendaftarkan akun</p>
+        </div>
+    </div>
+    <!-- start loading -->
+    <div class="sl" id="sl">
+        <div class="group">
+            <div class="group2">
+                <div class="sl_c">
+                    <img src="REPLAY/R.png" alt="R" class="sl_l1" id="sl_l1">
+                    <img src="REPLAY/EPLAY.png" alt="EPLAY" class="sl_l2" id="sl_l2">
+                </div>
+                <br><br>
+                <h5 class="loading_text" id="loading_text">Loading: 0%</h5>
+                <div class="centerlo">
+                    <div class="loading_bar" id="loading_bar">
+                        <div class="loading_red" id="loading_red"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- nav -->
+    <nav id="ldnav">
+        <div class="centernav">
+            <a href="" class="cna" id="cnaid">
+                <!-- <img src="icon/logoharvestssquare.png" class="logo" draggable="false">
+                <h1 class="judul1" id="jdl1id">REPLAY</h1> -->
+                <img src="REPLAY/R.png" alt="R" class="lo1">
+                <img src="REPLAY/EPLAY.png" alt="EPLAY" class="lo2">
+            </a>
+        </div>
+        <!-- <div class="endnav" onclick="info()" id="enid">
+            <img src="icon/question.png" class="learn" draggable="false">
+        </div> -->
+
+        <div class="endnav" onclick="burger()" id="burgerid">
+            <img src="icon/menu-burger.png" class="bgrbtn" draggable="false" id="threebtn">
+            <img src="icon/close.png" class="bgrxbtn" draggable="false" id="xbtn">
+        </div>
+    </nav>
+
+    <!-- burger -->
+    <div class="bgr" id="bgrid">
+        <div class="area_bgr">
+            <div class="sabgr">
+                <div class="scroll">
+                    <div class="linkbgr">
+                        <p>Menu</p>
+                        <a class="parent_a" draggable="false"><div class="linkchild">
+                            <div class="arealink">
+                                <img src="icon/home.png" alt="Home">
+                                <h3>Home</h3>
+                            </div>
+                        </div></a>
+                        <a href="Admin Dashboard/admin dashboard2.html" class="parent_a" target="_self" id="adda" draggable="false"><div class="linkchild">
+                            <div class="arealink2">
+                                <img src="icon/database-usage.png" alt="Home">
+                                <h3>Admin Dashboard</h3>
+                            </div>
+                        </div></a>
+                    </div>
+
+                    <div class="linkbgr">
+                        <p>Social Media</p>
+                        <a href="https://www.youtube.com/@gupharvestmadiun8476/featured" class="parent_a" target="_self" draggable="false"><div class="linkchild">
+                            <div class="arealink2">
+                                <img src="icon/youtube.png" alt="Home">
+                                <h3>Youtube</h3>
+                            </div>
+                        </div></a>
+                        <a href="https://www.instagram.com/gupharvestmadiun/" class="parent_a" target="_self" draggable="false"><div class="linkchild">
+                            <div class="arealink2">
+                                <img src="icon/instagram.png" alt="Home">
+                                <h3>Instagram</h3>
+                            </div>
+                        </div></a>
+                    </div>
+
+                    <div class="linkbgr">
+                        <p>Next Update</p>
+                        <a href="" class="parent_a" draggable="false"><div class="linkchild">
+                            <div class="arealink2">
+                                <img src="icon/megaphone.png" alt="Home">
+                                <h3>Information</h3>
+                            </div>
+                        </div></a>
+                        <a class="parent_a" onclick="open_login()" id="logid" draggable="false"><div class="linkchild">
+                            <div class="arealink2">
+                                <img src="icon/login-avatar.png" alt="Home">
+                                <h3>Login</h3>
+                            </div>
+                        </div></a>
+                        <a class="parent_a" onclick="logout()" id="logoutid" draggable="false"><div class="linkchild">
+                            <div class="arealink2">
+                                <img src="icon/logout.png" alt="Home">
+                                <h3>Log Out</h3>
+                            </div>
+                        </div></a>
+                    </div>
+
+                    <div class="infobgr">
+                        <div class="areainfo">
+                            <h3>Info</h3>
+                            <p>Website ini merupakan layanan tayangan ulang warta gereja.
+                                semua informasi gereja dapat diakses melalui layanan di website ini.
+                                jemaat bisa mengakses dimanapun dan kapanpun.</p>
+                        </div>
+                    </div>
+
+                    <div class="kosongarea"></div>
+                </div>
+                <!-- <div class="akunbgr">
+                    <div>
+                        <img src="" alt="akun">
+                        <h3></h3>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- warta -->
+    <br><br><br><br><br>
+    <header class="bg">
+        <div class="left">
+            <div>
+                <div class="terb_div n" id="terb_div">
+                    <h1 class="terb">Terbaru!</h1>
+                </div>
+                <div class="kotakv" id="ldv">
+                    <div class="video">
+                        <iframe src=""
+                        width="590" height="332" allow="autoplay" class="ifram" 
+                        frameborder="0" width="100%" height="100%" allowfullscreen="true" 
+                        mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay" title="Pemutar video" id="vid" draggable="false"></iframe>
+                    </div>
+                    <div class="jjsd">
+                        <div class="judul">
+                            <h2 id="jdl">???</h2>
+                        </div>
+                        <div class="deskripsi" id="lddes">
+                            <div class="des">
+                                <p>Website Layanan Warta Gereja <br>
+                                    "GUP Harvest Madiun" <br>
+                                    Gereja Utusan Pantekosta "Harvest" Madiun <br><br>
+
+                                    (Jika Website Terjadi Kendala Teknis, Hubungi Kami Melalui Email Di Bawah Ini) <br>
+                                    ycyl.projectmail@gmail.com <br>
+                                </p>
+                                <div class="desdiv">
+                                    <p id="desk1">Sesi 1-2: </p>
+                                    <a onclick="gantib('1-2')">Klik Disini</a>
+                                </div>
+                                <div class="desdiv2" id="desdiv2">
+                                    <p id="desk2">Sesi 3: </p>
+                                    <a onclick="gantib('3')">Klik Disini</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="kotakmi" id="ldlw">
+                <div class="top">
+                    <h2 class="topjd" id="topjd">WARTA GEREJA</h2>
+                </div>
+                <div class="bottom">
+                    <div class="cb">
+                        <!-- isi -->
+                        <div class="ini" onclick="mulai(0)" id="ming44">
+                            <div class="thumn">
+                                <img src="" id="gambar1">
+                                <h3 id="titleg1">MINGGU TERKHIR</h3>
+                            </div>
+                        </div>
+                        <!-- isi -->
+                        <div class="ini" onclick="mulai(1)" id="ming1">
+                            <div class="thumn">
+                                <img src="" id="gambar2">
+                                <h3 id="titleg2">MINGGU 1</h3>
+                            </div>
+                        </div>
+                        <!-- isi -->
+                        <div class="ini" onclick="mulai(2)" id="ming2">
+                            <div class="thumn">
+                                <img src="" id="gambar3">
+                                <h3 id="titleg3">MINGGU 2</h3>
+                            </div>
+                        </div>
+                        <!-- isi -->
+                        <div class="ini" onclick="mulai(3)" id="ming3">
+                            <div class="thumn">
+                                <img src="" id="gambar4">
+                                <h3 id="titleg4">MINGGU 3</h3>
+                            </div>
+                        </div>
+                        <!-- isi -->
+                        <div class="ini" onclick="mulai(4)" id="ming4">
+                            <div class="thumn">
+                                <img src="" id="gambar5">
+                                <h3 id="titleg5">MINGGU 4</h3>
+                            </div>
+                        </div>
+                        <!-- isi -->
+                        <div class="ini" onclick="mulai(5)" id="ming5">
+                            <div class="thumn">
+                                <img src="" id="gambar6">
+                                <h3 id="titleg6">MINGGU 5</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+
+    <div class="spacefot"></div>
+
+    <footer>
+        <h4>GUP Harvest © 2024 powered by <a href="https://www.youtube.com/@ycylstudio3452/featured" target="_self" draggable="false">YCYL Studio</a></h4>
+    </footer>
+
+    <!-- javascript -->
+    <!-- <script src="js & css/index.js"></script> -->
+    <script src="js & css/index 2.js"></script>
+    <script src="js & css/cookie.js"></script>
+    <!-- <script src="js/database.js"></script> -->
+    <!-- database -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script>
+        //database
+        var firebase_data_script;const firebaseConfig = {apiKey: "AIzaSyDGekJTeEJscUiN1y7NPNKCuC65WFfipJM",authDomain: "gup-harvest.firebaseapp.com",databaseURL: "https://gup-harvest-default-rtdb.firebaseio.com",projectId: "gup-harvest",storageBucket: "gup-harvest.appspot.com",messagingSenderId: "512729674455",appId: "1:512729674455:web:c6ed645e4f5356af363692",measurementId: "G-5MJ30QJ6CS"};firebase.initializeApp(firebaseConfig);const database = firebase.database();const myRef = database.ref('warta');const storage = firebase.storage();const storageRef = storage.ref("images");
+        
+        // Mendapatkan data dari Firebase
+        myRef.once('value')
+        .then((snapshot) => {
+            const data = snapshot.val();
+            // console.log(data);
+            getdata(data.json);
+        })
+        .catch((error) => {
+            console.error("Error getting data:", error);
+        });
+
+        function get_send_func() {
+            myRef.on("value", function(snapshot) {
+                snapshot.forEach(function(childSnapshot) {
+                    const child = childSnapshot.val();
+                    // console.log(child.akun_child);
+                    if(child.akun_child == "" || child.akun_child == NaN || child.akun_child == undefined || child.akun_child == null) {
+                        // console.log("kosong");
+                    }
+                    else {
+                        // console.log(child.akun_child.user);
+                        login(child.akun_child.user);
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
