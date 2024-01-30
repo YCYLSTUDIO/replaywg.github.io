@@ -282,7 +282,7 @@ body {
     text-align: center;
 }
 .sl_l1 {
-    width: 100px;
+    width: fit-content;
     height: 100px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -309,7 +309,7 @@ body {
     }
 }
 .sl_l2 {
-    width: 200px;
+    width: fit-content;
     height: 50px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -971,7 +971,7 @@ nav {
     pointer-events: none;
 }
 .lo1 {
-    width: 30px;
+    width: fit-content;
     height: 30px;
     margin-right: 3px;
     -webkit-user-select: none;
@@ -981,7 +981,7 @@ nav {
     pointer-events: none;
 }
 .lo2 {
-    width: 100px;
+    width: fit-content;
     height: 20px;
     margin-right: 3px;
     -webkit-user-select: none;
