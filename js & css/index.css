@@ -1783,12 +1783,12 @@ nav {
         margin-right: 1px;
     }
     .lo1 {
-        width: 20px;
+        width: fit-content;
         height: 20px;
         margin-right: 1px;
     }
     .lo2 {
-        width: 80px;
+        width: fit-content;
         height: 15px;
         margin-right: 1px;
     }
