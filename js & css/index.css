@@ -56,6 +56,7 @@ body {
     border: 2px solid transparent;
     z-index: 210;
     border-radius: 10px;
+    scale: 0.9;
 }
 .np {
     width: 100%;
@@ -204,6 +205,7 @@ body {
     user-select: none;
     pointer-events: none;
     margin-bottom: 10px;
+    color: rgb(255, 53, 53);
 }
 /* .salah {
     color: rgb(255, 69, 69);
@@ -523,7 +525,7 @@ body {
 .arealink {
     width: 90%;
     height: 85%;
-    background-color: rgb(255, 0, 0);
+    background-color: #B00020;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -785,6 +787,7 @@ footer a {
         'kanan kanan kanan'; */
     grid-template-areas:
     'kiri kiri kiri kanan kanan kanan';
+    margin-top: -10px;
 }
 .kotakv {
     width: 600px;
@@ -828,27 +831,24 @@ footer a {
     -ms-user-select: none;
     user-select: none;
 }
-.desdiv a, .desdiv2 a {
+.desdiv span, .desdiv2 span {
     font-size: 18px;
     font-family: sans-serif;
     margin-top: -18px;
     margin-left: 5px;
     cursor: pointer;
     border-bottom: 1px solid transparent;
-    color: #0000EE;
-    border-bottom: 1px solid #0000EE;
+    color: #09007E;
+    border-bottom: 1px solid #09007E;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-/* .desdiv a:hover, .desdiv2 a:hover {
-    border-bottom: 1px solid rgb(100, 162, 255);
-} */
 .deskripsi {
     width: 100%;
     height: auto;
-    background-color: rgb(116, 116, 116);
+    background-color: #606060;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -1413,7 +1413,7 @@ nav {
     }
     .ktkr {
         width: 400px;
-        height: 480px;
+        height: 580px;
         padding: 50px;
         border-radius: 10px;
     }
@@ -1425,13 +1425,14 @@ nav {
     .group {
         scale: 1;
     }
+    .bg {
+        margin-top: -20px;
+    }
 }
 @media screen and (max-width: 1120px) {
     .bg {
         display: block;
-        /* grid-template-areas:
-        'kiri kiri kiri',
-        'kanan kanan kanan'; */
+        margin-top: -20px;
     }
     .group {
         scale: 1;
@@ -1487,10 +1488,16 @@ nav {
     }
 }
 @media screen and (max-width: 680px) {
+    .pembsb {
+        font-size: 15px;
+    }
     .nps {
         width: 100%;
         height: 50px;
         font-size: 12px;
+    }
+    .bg {
+        margin-top: -30px;
     }
     .npinp {
         width: 81%;
@@ -1530,7 +1537,7 @@ nav {
     }
     .ktkr {
         width: 300px;
-        height: 380px;
+        height: 480px;
         padding: 50px;
         border-radius: 10px;
     }
@@ -1613,13 +1620,19 @@ nav {
     }
 }
 @media screen and (max-width: 460px) {
+    .pembsb {
+        font-size: 12px;
+    }
     .terb {
         font-size: 30px;
+    }
+    .bg {
+        margin-top: -40px;
     }
     .nps {
         width: 100%;
         height: 40px;
-        font-size: 10px;
+        font-size: 12px;
     }
     .npinp {
         width: 81%;
@@ -1654,12 +1667,12 @@ nav {
         font-size: 25px;
     }
     .note {
-        font-size: 10px;
+        font-size: 12px;
         margin-top: 15px;
     }
     .ktkr {
         width: 180px;
-        height: 260px;
+        height: 360px;
         padding: 50px;
         border-radius: 10px;
     }
@@ -1734,7 +1747,7 @@ nav {
     .judul {
         width: 100%;
         height: auto;
-        font-size: 11px;
+        font-size: 12px;
     }
     .deskripsi {
         width: 100%;
@@ -1751,7 +1764,7 @@ nav {
     .desdiv p, .desdiv2 p {
         font-size: 15px;
     }
-    .desdiv a, .desdiv2 a {
+    .desdiv span, .desdiv2 span {
         font-size: 13px;
         margin-top: -12px;
         margin-left: 4px;
@@ -1797,7 +1810,7 @@ nav {
         padding-bottom: 5px;
     }
     .fk .cr .cr2 p {
-        font-size: 10px;
+        font-size: 12px;
     }
     .af {
         width: 100%;
@@ -1818,11 +1831,14 @@ nav {
     }
 }
 @media screen and (max-width: 410px) {
+    .bg {
+        margin-top: -50px;
+    }
     .terb {
         font-size: 20px;
     }
     footer {
-        font-size: 11px;
+        font-size: 12px;
     }
     .group {
         scale: 0.5;
@@ -1878,7 +1894,7 @@ nav {
     .judul {
         width: 100%;
         height: auto;
-        font-size: 7px;
+        font-size: 12px;
     }
     .deskripsi {
         width: 100%;
@@ -1892,7 +1908,7 @@ nav {
     .desdiv p, .desdiv2 p {
         font-size: 12px;
     }
-    .desdiv a, .desdiv2 a {
+    .desdiv span, .desdiv2 span {
         font-size: 12px;
         margin-top: -11px;
         margin-left: 4px;
@@ -1928,7 +1944,7 @@ nav {
         padding-bottom: 5px;
     }
     .fk .cr .cr2 p {
-        font-size: 10px;
+        font-size: 12px;
     }
     .af {
         width: 100%;

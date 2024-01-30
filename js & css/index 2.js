@@ -92,7 +92,13 @@ let persen = 0;
 let loading_proses = false;
 function loading() {
     if(loadingbool == true && loading_proses == true) {
-        if(nomor == penentu_nomor && persen < 80) {
+        if(nomor == penentu_nomor && persen < 40) {
+            persen += 1;
+            loading_text.innerHTML = "Loading: " + persen + "%";
+            loading_red.style.width = persen + "%";
+        }
+
+        if(persen > 39 && persen < 80 && jdl.innerHTML !== "???") {
             persen += 1;
             loading_text.innerHTML = "Loading: " + persen + "%";
             loading_red.style.width = persen + "%";
@@ -449,14 +455,14 @@ function mulai(pilwar) {
         if(warta.json.minggu04.url2 == "" || warta.json.minggu04.url2 == null)
         {
             desdiv2.classList.add("n");
-            desk1.innerHTML = "Sesi 1-3:";
+            desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu04.nama;
             vid.src = warta.json.minggu04.url;
         }
         else
         {
             desdiv2.classList.remove("n");
-            desk1.innerHTML = "Sesi 1-2:";
+            desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu04.nama;
             vid.src = warta.json.minggu04.url;
         }
@@ -472,14 +478,14 @@ function mulai(pilwar) {
         if(warta.json.minggu1.url2 == "" || warta.json.minggu1.url2 == null)
         {
             desdiv2.classList.add("n");
-            desk1.innerHTML = "Sesi 1-3:";
+            desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu1.nama;
             vid.src = warta.json.minggu1.url;
         }
         else
         {
             desdiv2.classList.remove("n");
-            desk1.innerHTML = "Sesi 1-2:";
+            desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu1.nama;
             vid.src = warta.json.minggu1.url;
         }
@@ -495,14 +501,14 @@ function mulai(pilwar) {
         if(warta.json.minggu2.url2 == "" || warta.json.minggu2.url2 == null)
         {
             desdiv2.classList.add("n");
-            desk1.innerHTML = "Sesi 1-3:";
+            desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu2.nama;
             vid.src = warta.json.minggu2.url;
         }
         else
         {
             desdiv2.classList.remove("n");
-            desk1.innerHTML = "Sesi 1-2:";
+            desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu2.nama;
             vid.src = warta.json.minggu2.url;
         }
@@ -518,14 +524,14 @@ function mulai(pilwar) {
         if(warta.json.minggu3.url2 == "" || warta.json.minggu3.url2 == null)
         {
             desdiv2.classList.add("n");
-            desk1.innerHTML = "Sesi 1-3:";
+            desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu3.nama;
             vid.src = warta.json.minggu3.url;
         }
         else
         {
             desdiv2.classList.remove("n");
-            desk1.innerHTML = "Sesi 1-2:";
+            desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu3.nama;
             vid.src = warta.json.minggu3.url;
         }
@@ -541,14 +547,14 @@ function mulai(pilwar) {
         if(warta.json.minggu4.url2 == "" || warta.json.minggu4.url2 == null)
         {
             desdiv2.classList.add("n");
-            desk1.innerHTML = "Sesi 1-3:";
+            desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu4.nama;
             vid.src = warta.json.minggu4.url;
         }
         else
         {
             desdiv2.classList.remove("n");
-            desk1.innerHTML = "Sesi 1-2:";
+            desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu4.nama;
             vid.src = warta.json.minggu4.url;
         }
@@ -564,14 +570,14 @@ function mulai(pilwar) {
         if(warta.json.minggu5.url2 == "" || warta.json.minggu5.url2 == null)
         {
             desdiv2.classList.add("n");
-            desk1.innerHTML = "Sesi 1-3:";
+            desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu5.nama;
             vid.src = warta.json.minggu5.url;
         }
         else
         {
             desdiv2.classList.remove("n");
-            desk1.innerHTML = "Sesi 1-2:";
+            desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu5.nama;
             vid.src = warta.json.minggu5.url;
         }
@@ -713,7 +719,6 @@ ktkr.style.borderColor = "transparent";
 function login(data) {
     if(namainp.value == data.nama && passinp.value == data.pass) {
         pembsb.innerHTML = "";
-        pembsb.color = "rgb(9, 255, 0)";
         ktkr.style.borderColor = "rgb(0, 201, 33)";
         close_login();
         DOM_jemat();
@@ -721,7 +726,6 @@ function login(data) {
     }
     else {
         pembsb.innerHTML = "Username / Password yang anda masukan tidak ada di database";
-        pembsb.color = "rgb(255, 69, 69)";
         ktkr.style.borderColor = "rgb(255, 25, 25)";
     }
 }
@@ -744,8 +748,6 @@ function open_login() {
     namainp.value = "";
     passinp.value = "";
     bodye.style.overflowY = "hidden";
-    // setTimeout(function() {
-    // }, 1000);
 }
 function logout() {
     DOM_jemat2();
@@ -754,25 +756,30 @@ function logout() {
 }
 
 setInterval(() => {
-    console.clear();
+    // console.clear();
 }, 20);
 
 
-// Disable right-click
-document.addEventListener('contextmenu', (e) => e.preventDefault());
+// // Disable right-click
+// document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-function ctrlShiftKey(e, keyCode) {
-  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-}
+// function ctrlShiftKey(e, keyCode) {
+//   return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+// }
 
-document.onkeydown = (e) => {
-  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
-  if (
-    event.keyCode === 123 ||
-    ctrlShiftKey(e, 'I') ||
-    ctrlShiftKey(e, 'J') ||
-    ctrlShiftKey(e, 'C') ||
-    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-  )
-    return false;
-};
+// document.onkeydown = (e) => {
+//   // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+//   if (
+//     event.keyCode === 123 ||
+//     ctrlShiftKey(e, 'I') ||
+//     ctrlShiftKey(e, 'J') ||
+//     ctrlShiftKey(e, 'C') ||
+//     (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+//   )
+//     return false;
+// };
+
+setTimeout(function() {
+    const bgfull = document.getElementById("bgfull");
+    bgfull.classList.remove("n");
+}, 1000);

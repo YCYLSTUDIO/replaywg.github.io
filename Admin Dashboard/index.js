@@ -164,19 +164,19 @@ function loadingscreen_stop() {
 setInterval(() => {
     if(startscreenl == true) {
         if(titik == 0) {
-            starttext.innerHTML = "load Data";
+            starttext.innerHTML = "Load Data";
             titik = 1;
         }
         else if(titik == 1) {
-            starttext.innerHTML = "load Data.";
+            starttext.innerHTML = "Load Data.";
             titik = 2;
         }
         else if(titik == 2) {
-            starttext.innerHTML = "load Data..";
+            starttext.innerHTML = "Load Data..";
             titik = 3;
         }
         else if(titik == 3) {
-            starttext.innerHTML = "load Data...";
+            starttext.innerHTML = "Load Data...";
             titik = 0;
         }
     }
