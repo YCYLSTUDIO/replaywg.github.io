@@ -201,6 +201,17 @@ setInterval(() => {
     }
 }, 1000);
 
+function info_function2(data) {
+    const ininp = document.getElementById("ininp");
+    if(data.info == "" || data.info == NaN || data.info == undefined || data.info == null) {
+        // console.log("kosong");
+    }
+    else {
+        ininp.value = data.info;
+        infodata = data.info;
+    }
+}
+
 setInterval(() => {
     console.clear();
 }, 20);

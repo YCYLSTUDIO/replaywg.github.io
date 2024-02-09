@@ -78,6 +78,34 @@
                 <div class="top">
                     <div>
                         <h1>Admin Dashboard</h1>
+                        <h3>Perbarui Informasi</h3>
+                    </div>
+                </div>
+                <div class="bd">
+                    <div>
+                        <br>
+                        <label class="lb2"><h4>Informasi: </h4></label>
+                        <input type="text" 
+                        class="inp2" 
+                        id="ininp"
+                        maxlength="500" 
+                        minlength="3"
+                        placeholder="Masukan Informasi"
+                        required 
+                        autocomplete="off"
+                        oninvalid="this.setCustomValidity('Isi Input Tidak Sesuai Peraturan')"
+                        oninput="this.setCustomValidity('')"><br>
+                        <input type="submit" class="sub" onclick="info_functionp()">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="full">
+            <div class="full2">
+                <div class="top">
+                    <div>
+                        <h1>Admin Dashboard</h1>
                         <h3>Perbarui Sorotan</h3>
                     </div>
                 </div>
@@ -100,6 +128,7 @@
                 </div>
             </div>
         </div>
+
         <div class="fullv2">
             <div class="full2v2">
                 <div class="top">
@@ -742,6 +771,38 @@
                         console.error('Gagal memperbarui nilai pada child:', error);
                         loadingscreen_stop();
                     });
+                }
+            }
+        }
+
+        function info_function() {
+            myRef.on("value", function(snapshot) {
+                snapshot.forEach(function(childSnapshot) {
+                    const child = childSnapshot.val();
+                    // console.log(child);
+                    info_function2(child);
+                });
+            });
+        }
+        info_function();
+
+        function info_functionp() {
+            const ininp = document.getElementById("ininp");
+            if(ininp.value) {
+                if( ininp.value.length > 3 && ininp.value !== infodata)
+                {
+                    loadingscreen_start();
+                    //mengganti data baru ke database gup
+                    infodata = ininp.value;
+                    // console.error('Tidak ada file yang dipilih.');
+                    database.ref("warta/tambahan/info").set(infodata)
+                    .then(() => {
+                        console.log('Nilai pada warta terbaru berhasil diperbarui!');
+                        alert("info berhasil di perbarui");
+                        //load data
+                        call_load();
+                        loadingscreen_stop();
+                    })
                 }
             }
         }

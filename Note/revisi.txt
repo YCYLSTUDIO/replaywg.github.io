@@ -1,0 +1,88 @@
+Url diganti Link Pertama - Kedua V
+kode: G01 - G06 V
+tulisan kosong diganti kode V
+setelah warta diperbarui input dikosongkan + form editing dihilangkan V
+
+Judul/Title diganti Judul Thumbnail V
+nama diganti Judul Warta V
+gambar diganti thumbnail V
+
+Judul Thumbnail & Judul Warta (tulisan tebal, font diganti) V
+
+tahap 1 diganti Verifikasi Identitas V
+tahap 2 diganti Update Trending V
+tahap 3 diganti Preview & Code Item V
+tahap 4 diganti Board Edit V
+tahap 5 diganti Tutorial V
+
+warta terbaru placeholder masukan kode item (kode item[]) V
+
+footer: halaman ini bersifat rahasia, halaman khusus operator (bold, capslock)
+
+pemberitahuan salah dan benar password:
+password yang anda masukan salah(tulisan tebal) V
+
+header diberi gambar -
+
+background diberi gambar (bright kecil) V
+
+semua input dikosongkan saat pengguna masuk V
+
+
+start screen V
+loading screen V
+
+
+project admin dashboard 80%
+project replay GUP 70%
+
+admin dashboard 80% 
+-mode pc/mode hp
+-ganti password
+-tutorial
+
+replay GUP 90%
+-footer teks ycyl studio dibuat link jika diklik menuju youtube V
+-light/dark mode diganti nav bar/garis 3/titik 3 V
+-navbar: home, sosial media, login(admin dashboard) V
+-kurang tulisan pemberitahuan terbaru V
+-posisi nav nav bar/garis 3/titik 3, logo tanda, tanya V
+-login form = 
+{
+ -get data =
+ {
+  -if(nama & pass (data) == $(admin))
+  {
+   -btn admindashboard muncul
+  }
+  -else
+  {
+   -btn admindashboard hilang
+  }
+ }
+
+
+ -login = 
+ {
+  -if(nama & pass (input) == $(admin))
+  {
+   -close login form and save data
+  }
+  -else
+  {
+   -close login form and save data
+  }
+ }
+}
+
+
+burger:
+link: home, informasi, warta
+info: Website ini merupakan layanan tayangan ulang warta gereja.
+      semua informasi gereja dapat diakses melalui layanan di website ini.
+      jemaat bisa mengakses dimanapun dan kapanpun.
+akun: - (next Update)
+
+
+
+bikin form login

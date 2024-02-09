@@ -755,6 +755,33 @@ function logout() {
     location.reload();
 }
 
+const parent_info = document.getElementById("parent_info");
+const isi_info = document.getElementById("isi_info");
+function tampil(data) {
+    var ada = 0;
+    if(data.info == "" || data.info == NaN || data.info == undefined || data.info == null) {
+        console.log("kosong");
+        ada++;
+    }
+    else {
+        console.log(data.info);
+        ada++;
+    }
+
+    if(ada > 0) {
+        isi_info.innerHTML = data.info;
+        parent_info.classList.remove("n");
+    }
+    else {
+        parent_info.classList.add("n");
+    }
+}
+
+setTimeout(function() {
+    const bgfull = document.getElementById("bgfull");
+    bgfull.classList.remove("n");
+}, 1000);
+
 setInterval(() => {
     console.clear();
 }, 20);
@@ -778,8 +805,3 @@ document.onkeydown = (e) => {
   )
     return false;
 };
-
-setTimeout(function() {
-    const bgfull = document.getElementById("bgfull");
-    bgfull.classList.remove("n");
-}, 1000);

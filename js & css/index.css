@@ -10,6 +10,67 @@ body {
     overflow-y: hidden;
     color: white;
 }
+.pt {
+    width: 100%;
+    height: auto;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.kpt {
+    width: 90%;
+    height: auto;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid white;
+    animation: 2s rwb ease infinite;
+    animation-delay: 4s;
+}
+.area-kpt {
+    width: 90%;
+}
+.kpt h2 {
+    margin: 20px 0px 10px 0px;
+    padding: 0px;
+    animation: 2s rw ease infinite;
+    animation-delay: 4s;
+}
+.kpt h4 {
+    margin: 0px 0px 20px 0px;
+    padding: 0px;
+    word-break: normal;
+    animation: 2s rw ease infinite;
+    animation-delay: 4s;
+}
+@keyframes rwb {
+    0%{
+        border: 2px solid white;
+    }
+    50%{
+        border: 2px solid red;
+    }
+    100%{
+        border: 2px solid white;
+    }
+}
+@keyframes rw {
+    0%{
+        color: white;
+    }
+    50%{
+        color: red;
+    }
+    100%{
+        color: white;
+    }
+}
 .spacefot {
     margin-bottom: 10px;
     width: 100%;
@@ -1355,6 +1416,9 @@ nav {
         margin-top: 200px;
     }
 }
+.jarakk {
+    display: none;
+}
 /* responsive */
 @media screen and (max-width: 6000px) {
     .group {
@@ -1449,7 +1513,10 @@ nav {
     }
     .kotakmi {
         width: 450px;
-        margin-top: 390px;
+    }
+    .jarakk {
+        display: block;
+        height: 390px;
     }
     .cb {
         width: 90%;
@@ -1487,6 +1554,9 @@ nav {
     .note {
         font-size: 15px;
         margin-top: 10px;
+    }
+    .spacefot {
+        height: 50px;
     }
 }
 @media screen and (max-width: 680px) {
@@ -1545,7 +1615,10 @@ nav {
     }
     .kotakmi {
         width: 400px;
-        margin-top: 340px;
+    }
+    .jarakk {
+        display: block;
+        height: 340px;
     }
     .group {
         scale: 0.8;
@@ -1620,6 +1693,9 @@ nav {
         font-size: 13px;
         margin-bottom: 5px;
     }
+    .spacefot {
+        height: 50px;
+    }
 }
 @media screen and (max-width: 460px) {
     .pembsb {
@@ -1629,7 +1705,7 @@ nav {
         font-size: 30px;
     }
     .bg {
-        margin-top: -40px;
+        margin-top: -50px;
     }
     .nps {
         width: 100%;
@@ -1697,8 +1773,11 @@ nav {
     }
     .kotakmi {
         width: 400px;
-        margin-top: 120px;
         scale: 0.7;
+    }
+    .jarakk {
+        display: block;
+        height: 180px;
     }
     .group {
         scale: 0.5;
@@ -1831,10 +1910,46 @@ nav {
         height: auto;
         padding-bottom: 20px;
     }
+    .spacefot {
+        height: 1px;
+    }
+
+    .pt {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .kpt h2 {
+        margin: 20px 0px 10px 0px;
+        padding: 0px;
+        font-size: 18px;
+    }
+    .kpt h4 {
+        margin: 0px 0px 20px 0px;
+        padding: 0px;
+        word-break: break-all;
+        font-size: 15px;
+    }
 }
 @media screen and (max-width: 410px) {
+    .pt {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .kpt h2 {
+        margin: 20px 0px 10px 0px;
+        padding: 0px;
+        font-size: 14px;
+    }
+    .kpt h4 {
+        margin: 0px 0px 20px 0px;
+        padding: 0px;
+        word-break: break-all;
+        font-size: 12px;
+    }
     .bg {
-        margin-top: -50px;
+        margin-top: -40px;
     }
     .terb {
         font-size: 20px;
@@ -1847,8 +1962,11 @@ nav {
     }
     .kotakmi {
         width: 300px;
-        margin-top: 170px;
         scale: 0.7;
+    }
+    .jarakk {
+        display: block;
+        height: 200px;
     }
     .cb {
         width: 90%;
@@ -1974,5 +2092,8 @@ nav {
     .des {
         width: 90%;
         height: auto;
+    }
+    .spacefot {
+        height: 1px;
     }
 }
