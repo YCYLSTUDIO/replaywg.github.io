@@ -759,12 +759,10 @@ const parent_info = document.getElementById("parent_info");
 const isi_info = document.getElementById("isi_info");
 function tampil(data) {
     var ada = 0;
-    if(data.info == "" || data.info == NaN || data.info == undefined || data.info == null) {
-        console.log("kosong");
-        ada++;
+    if(data.info == "" || data.info == NaN || data.info == undefined || data.info == null || data.info == "0") {
+        // ada++;
     }
     else {
-        console.log(data.info);
         ada++;
     }
 
