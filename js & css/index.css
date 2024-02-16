@@ -1759,6 +1759,13 @@ nav {
     }
 }
 @media screen and (max-width: 460px) {
+    .leftt {
+        width: 80%;
+        height: 100%;
+        display: block;
+        justify-content: center;
+        align-items: start;
+    }
     .bgr {
         width: 100%;
     }
