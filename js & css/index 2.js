@@ -780,6 +780,59 @@ setTimeout(function() {
     bgfull.classList.remove("n");
 }, 1000);
 
+
+//revisi
+setInterval(() => {
+    const ldve = document.getElementById("ldv");
+    let widthldve = ldve.clientWidth;
+    // let totals = widthldve - 258;
+    let totals = widthldve / 1.78;
+    // console.log(totals);
+    ldve.style.height = totals + "px";
+
+
+
+    //get width
+    let widthlgambars = gambars.clientWidth;
+    let widthlgambars2 = gambars2.clientWidth;
+    let widthlgambars3 = gambars3.clientWidth;
+    let widthlgambars4 = gambars4.clientWidth;
+    let widthlgambars5 = gambars5.clientWidth;
+    let widthlgambars6 = gambars6.clientWidth;
+
+    //get total
+    let totalgs = widthlgambars / 2;
+    let totalgs2 = widthlgambars2 / 2;
+    let totalgs3 = widthlgambars3 / 2;
+    let totalgs4 = widthlgambars4 / 2;
+    let totalgs5 = widthlgambars5 / 2;
+    let totalgs6 = widthlgambars6 / 2;
+
+    //console
+    // console.log("witdh", widthlgambars, "\ntotal", totalgs, "\nteks", totalgs / 2 );
+
+    //set height
+    ming44.style.height = totalgs + "px";
+    ming1.style.height = totalgs + "px";
+    ming2.style.height = totalgs + "px";
+    ming3.style.height = totalgs + "px";
+    ming4.style.height = totalgs + "px";
+    ming5.style.height = totalgs + "px";
+
+    //set title
+    titles.style.marginTop = "-" + totalgs / 1.7 + "px";
+    titles2.style.marginTop = "-" + totalgs2 / 1.7 + "px";
+    titles3.style.marginTop = "-" + totalgs3 / 1.7 + "px";
+    titles4.style.marginTop = "-" + totalgs4 / 1.7 + "px";
+    titles5.style.marginTop = "-" + totalgs5 / 1.7 + "px";
+    titles6.style.marginTop = "-" + totalgs6 / 1.7 + "px";
+
+}, 20);
+
+
+
+//penting
+
 setInterval(() => {
     console.clear();
 }, 20);

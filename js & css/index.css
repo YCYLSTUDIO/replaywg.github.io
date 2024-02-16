@@ -684,7 +684,6 @@ footer a {
 }
 .thumn h3 {
     font-size: 25px;
-    margin-top: -110px;
     color: white;
     filter: brightness(100%);
     opacity: 0;
@@ -766,7 +765,7 @@ footer a {
     pointer-events: none;
 }
 .ini {
-    width: 90%;
+    width: 80%;
     height: 200px;
     margin-bottom: 0px;
     margin-left: 5px;
@@ -817,7 +816,7 @@ footer a {
 .cb {
     display: flex;
     flex-wrap: wrap;
-    width: 360px;
+    width: 100%;
     height: auto;
     /* background-color: cornflowerblue; */
     justify-content: center;
@@ -853,19 +852,63 @@ footer a {
     margin-top: -10px;
 }
 .kotakv {
-    width: 600px;
-    height: 339px;
+    width: 100%;
     background-color: rgb(116, 116, 116);
     margin-top: 30px;
 }
 .jjsd {
-    width: 600px;
+    width: 100%;
     height: auto;
     margin-top: 10px;
     /* background-color: green; */
     justify-content: center;
     align-items: start;
     text-align: start;
+}
+.bannerc {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banner {
+    width: 400px;
+    height: auto;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.banner img {
+    width: 100%;
+    height: fit-content;
+}
+
+.banner2 {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.banner2 img {
+    width: 100%;
+    height: fit-content;
+}
+
+.banner {
+    display: block;
+}
+.banner2 {
+    display: none;
+}
+
+.rightc {
+    width: 100%;
+    height: auto;
 }
 .desdiv {
     margin: 0px;
@@ -878,7 +921,7 @@ footer a {
 }
 .desdiv2 {
     margin: 0px;
-    margin-top: -15px;
+    margin-top: -10px;
     padding: 0px;
     width: 100%;
     display: flex;
@@ -969,6 +1012,14 @@ footer a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.kotakmic {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .kotakmi {
     width: 400px;
@@ -1424,6 +1475,12 @@ nav {
     .group {
         scale: 4;
     }
+    .banner {
+        display: block;
+    }
+    .banner2 {
+        display: none;
+    }
 }
 @media screen and (max-width: 5000px) {
     .group {
@@ -1495,7 +1552,18 @@ nav {
         margin-top: -20px;
     }
 }
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1230px) {
+    .topjd {
+        font-size: 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .banner {
+        display: none;
+    }
+    .banner2 {
+        display: block;
+    }
     .bg {
         display: block;
         margin-top: -20px;
@@ -1507,12 +1575,19 @@ nav {
         width: 100%;
         height: 100%;
     }
+    .leftt {
+        width: 90%;
+        height: 100%;
+        display: block;
+        justify-content: center;
+        align-items: start;
+    }
     .right {
         width: 100%;
         height: 100%;
     }
     .kotakmi {
-        width: 450px;
+        width: 90%;
     }
     .jarakk {
         display: block;
@@ -1530,16 +1605,7 @@ nav {
         margin-top: 10px;
     }
     .thumn h3 {
-        font-size: 25px;
-        margin-top: -110px;
-        color: white;
-        filter: brightness(100%);
-        opacity: 0;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        pointer-events: none;
+        font-size: 40px;
     }
     .thumn:hover h3 {
         opacity: 1;
@@ -1560,6 +1626,11 @@ nav {
     }
 }
 @media screen and (max-width: 680px) {
+    .topjd {
+        font-size: 25px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
     .pembsb {
         font-size: 15px;
     }
@@ -1614,7 +1685,7 @@ nav {
         border-radius: 10px;
     }
     .kotakmi {
-        width: 400px;
+        width: 90%;
     }
     .jarakk {
         display: block;
@@ -1636,15 +1707,6 @@ nav {
     }
     .thumn h3 {
         font-size: 25px;
-        margin-top: -110px;
-        color: white;
-        filter: brightness(100%);
-        opacity: 0;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        pointer-events: none;
     }
     .thumn:hover h3 {
         opacity: 1;
@@ -1657,13 +1719,12 @@ nav {
         filter: brightness(100%);
     }
     .kotakv {
-        width: 425px;
-        height: 239px;
+        width: 100%;
         background-color: rgb(116, 116, 116);
         margin-top: 30px;
     }
     .jjsd {
-        width: 425px;
+        width: 100%;
         height: auto;
     }
     .judul {
@@ -1698,6 +1759,27 @@ nav {
     }
 }
 @media screen and (max-width: 460px) {
+    .bgr {
+        width: 100%;
+    }
+    .linkbgr p {
+        margin-left: 28px;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .arealink img, .arealink2 img {
+        width: fit-content;
+        height: 50%;
+        margin-left: 30px;
+    }
+    .arealink h3, .arealink2 h3 {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .topjd {
+        font-size: 23px;
+        margin: 0px;
+    }
     .pembsb {
         font-size: 12px;
     }
@@ -1754,26 +1836,9 @@ nav {
         padding: 50px;
         border-radius: 10px;
     }
-    .bgr {
-        width: 100%;
-    }
-    .linkbgr p {
-        margin-left: 28px;
-        font-size: 13px;
-        margin-bottom: 5px;
-    }
-    .arealink img, .arealink2 img {
-        width: fit-content;
-        height: 50%;
-        margin-left: 30px;
-    }
-    .arealink h3, .arealink2 h3 {
-        font-size: 15px;
-        margin-left: 10px;
-    }
     .kotakmi {
-        width: 400px;
-        scale: 0.7;
+        width: 90%;
+        /* scale: 0.7; */
     }
     .jarakk {
         display: block;
@@ -1795,15 +1860,6 @@ nav {
     }
     .thumn h3 {
         font-size: 25px;
-        margin-top: -110px;
-        color: white;
-        filter: brightness(100%);
-        opacity: 0;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        pointer-events: none;
     }
     .thumn:hover h3 {
         opacity: 1;
@@ -1816,13 +1872,12 @@ nav {
         filter: brightness(100%);
     }
     .kotakv {
-        width: 325px;
-        height: 184px;
+        width: 100%;
         background-color: rgb(116, 116, 116);
         margin-top: 30px;
     }
     .jjsd {
-        width: 325px;
+        width: 100%;
         height: auto;
     }
     .judul {
@@ -1878,8 +1933,8 @@ nav {
         height: 23px;
     }
     .bgrxbtn {
-        width: 22px;
-        height: 23px;
+        width: 21px;
+        height: 22px;
     }
     .cna h1 {
         color: white;
@@ -1906,7 +1961,7 @@ nav {
         height: 100%;
     }
     .cb {
-        width: 100%;
+        width: 90%;
         height: auto;
         padding-bottom: 20px;
     }
@@ -1961,8 +2016,9 @@ nav {
         scale: 0.5;
     }
     .kotakmi {
-        width: 300px;
-        scale: 0.7;
+        /* width: 300px;
+        scale: 0.7; */
+        width: 90%;
     }
     .jarakk {
         display: block;
@@ -1972,7 +2028,7 @@ nav {
         width: 90%;
     }
     .ini {
-        width: 90%;
+        width: 100%;
         height: 200px;
         margin-bottom: 0px;
         margin-left: 5px;
@@ -1980,16 +2036,7 @@ nav {
         margin-top: 10px;
     }
     .thumn h3 {
-        font-size: 25px;
-        margin-top: -110px;
-        color: white;
-        filter: brightness(100%);
-        opacity: 0;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        pointer-events: none;
+        font-size: 22px;
     }
     .thumn:hover h3 {
         opacity: 1;
@@ -2002,13 +2049,12 @@ nav {
         filter: brightness(100%);
     }
     .kotakv {
-        width: 225px;
-        height: 128px;
+        width: 100%;
         background-color: rgb(116, 116, 116);
         margin-top: 30px;
     }
     .jjsd {
-        width: 225px;
+        width: 100%;
         height: auto;
     }
     .judul {
