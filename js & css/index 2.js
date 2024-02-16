@@ -451,9 +451,16 @@ function start() {
 
 let pilwar_akhir;
 function mulai(pilwar) {
+    // console.log(pilwar);
     if(pilwar == 0) {
         if(warta.json.minggu04.url2 == "" || warta.json.minggu04.url2 == null)
         {
+            ming44.classList.add("ini2");
+            ming1.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming4.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu04.nama;
@@ -461,6 +468,12 @@ function mulai(pilwar) {
         }
         else
         {
+            ming44.classList.add("ini2");
+            ming1.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming4.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu04.nama;
@@ -477,6 +490,12 @@ function mulai(pilwar) {
     else if(pilwar == 1) {
         if(warta.json.minggu1.url2 == "" || warta.json.minggu1.url2 == null)
         {
+            ming1.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming4.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu1.nama;
@@ -484,6 +503,12 @@ function mulai(pilwar) {
         }
         else
         {
+            ming1.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming4.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu1.nama;
@@ -500,6 +525,12 @@ function mulai(pilwar) {
     else if(pilwar == 2) {
         if(warta.json.minggu2.url2 == "" || warta.json.minggu2.url2 == null)
         {
+            ming2.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming1.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming4.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu2.nama;
@@ -507,6 +538,12 @@ function mulai(pilwar) {
         }
         else
         {
+            ming2.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming1.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming4.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu2.nama;
@@ -523,6 +560,12 @@ function mulai(pilwar) {
     else if(pilwar == 3) {
         if(warta.json.minggu3.url2 == "" || warta.json.minggu3.url2 == null)
         {
+            ming3.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming1.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming4.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu3.nama;
@@ -530,6 +573,12 @@ function mulai(pilwar) {
         }
         else
         {
+            ming3.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming1.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming4.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu3.nama;
@@ -546,6 +595,12 @@ function mulai(pilwar) {
     else if(pilwar == 4) {
         if(warta.json.minggu4.url2 == "" || warta.json.minggu4.url2 == null)
         {
+            ming4.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming1.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu4.nama;
@@ -553,6 +608,12 @@ function mulai(pilwar) {
         }
         else
         {
+            ming4.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming1.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming5.classList.remove("ini2");
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu4.nama;
@@ -569,6 +630,12 @@ function mulai(pilwar) {
     else if(pilwar == 5) {
         if(warta.json.minggu5.url2 == "" || warta.json.minggu5.url2 == null)
         {
+            ming5.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming1.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming4.classList.remove("ini2");
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu5.nama;
@@ -576,6 +643,12 @@ function mulai(pilwar) {
         }
         else
         {
+            ming5.classList.add("ini2");
+            ming44.classList.remove("ini2");
+            ming1.classList.remove("ini2");
+            ming2.classList.remove("ini2");
+            ming3.classList.remove("ini2");
+            ming4.classList.remove("ini2");
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu5.nama;
@@ -739,6 +812,8 @@ function close_login() {
         bgre.classList.add("n");
         bodye.style.overflowY = "auto";
     }, 1000);
+    pembsb.innerHTML = "";
+    ktkr.style.borderColor = "transparent";
 }
 function open_login() {
     burger();
@@ -748,6 +823,8 @@ function open_login() {
     namainp.value = "";
     passinp.value = "";
     bodye.style.overflowY = "hidden";
+    pembsb.innerHTML = "";
+    ktkr.style.borderColor = "transparent";
 }
 function logout() {
     DOM_jemat2();
@@ -833,26 +910,26 @@ setInterval(() => {
 
 //penting
 
-setInterval(() => {
-    console.clear();
-}, 20);
+// setInterval(() => {
+//     console.clear();
+// }, 20);
 
 
-// Disable right-click
-document.addEventListener('contextmenu', (e) => e.preventDefault());
+// // Disable right-click
+// document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-function ctrlShiftKey(e, keyCode) {
-  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-}
+// function ctrlShiftKey(e, keyCode) {
+//   return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+// }
 
-document.onkeydown = (e) => {
-  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
-  if (
-    event.keyCode === 123 ||
-    ctrlShiftKey(e, 'I') ||
-    ctrlShiftKey(e, 'J') ||
-    ctrlShiftKey(e, 'C') ||
-    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-  )
-    return false;
-};
+// document.onkeydown = (e) => {
+//   // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+//   if (
+//     event.keyCode === 123 ||
+//     ctrlShiftKey(e, 'I') ||
+//     ctrlShiftKey(e, 'J') ||
+//     ctrlShiftKey(e, 'C') ||
+//     (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+//   )
+//     return false;
+// };
