@@ -136,30 +136,32 @@ setInterval(() => {
 
 //function
 function auto_play() {
+    let angkavid = 0;
     if(warta.json.warta_terbaru == "G01") {
-        mulai(0);
         terb_div.classList.remove("n");
+        angkavid = 0;
     }
     else if(warta.json.warta_terbaru == "G02") {
-        mulai(1);
         terb_div.classList.remove("n");
+        angkavid = 1;
     }
     else if(warta.json.warta_terbaru == "G03") {
-        mulai(2);
         terb_div.classList.remove("n");
+        angkavid = 2;
     }
     else if(warta.json.warta_terbaru == "G04") {
-        mulai(3);
         terb_div.classList.remove("n");
+        angkavid = 3;
     }
     else if(warta.json.warta_terbaru == "G05") {
-        mulai(4);
         terb_div.classList.remove("n");
+        angkavid = 4;
     }
     else if(warta.json.warta_terbaru == "G06") {
-        mulai(5);
         terb_div.classList.remove("n");
+        angkavid = 5;
     }
+    mulai(angkavid);
 }
 function get_images() {
     storageRef.listAll().then(function(result) {
