@@ -7,6 +7,19 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logoharvestssquare.png"/>
+    <script>
+        // Menghapus "html" dari URL saat dokumen dimuat
+        window.onload = function() {
+            // Mendapatkan URL saat ini
+            var currentURL = window.location.href;
+
+            // Menghapus "html" dari URL
+            var cleanURL = currentURL.replace('.html', '');
+
+            // Mengubah URL saat ini tanpa "html"
+            window.history.replaceState({}, document.title, cleanURL);
+        };
+    </script>
 </head>
 <body>
     <!-- start & loading screen -->
