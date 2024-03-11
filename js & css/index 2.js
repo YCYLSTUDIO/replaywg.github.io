@@ -466,7 +466,8 @@ function mulai(pilwar) {
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu04.nama;
-            vid.src = warta.json.minggu04.url;
+            // vid.src = warta.json.minggu04.url;
+            framew(warta.json.minggu04.isdrive, warta.json.minggu04.url);
         }
         else
         {
@@ -479,7 +480,8 @@ function mulai(pilwar) {
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu04.nama;
-            vid.src = warta.json.minggu04.url;
+            // vid.src = warta.json.minggu04.url;
+            framew(warta.json.minggu04.isdrive, warta.json.minggu04.url);
         }
 
         if(warta.json.warta_terbaru == "G01") {
@@ -501,7 +503,8 @@ function mulai(pilwar) {
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu1.nama;
-            vid.src = warta.json.minggu1.url;
+            // vid.src = warta.json.minggu1.url;
+            framew(warta.json.minggu1.isdrive, warta.json.minggu1.url);
         }
         else
         {
@@ -514,7 +517,8 @@ function mulai(pilwar) {
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu1.nama;
-            vid.src = warta.json.minggu1.url;
+            // vid.src = warta.json.minggu1.url;
+            framew(warta.json.minggu1.isdrive, warta.json.minggu1.url);
         }
 
         if(warta.json.warta_terbaru == "G02") {
@@ -536,7 +540,8 @@ function mulai(pilwar) {
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu2.nama;
-            vid.src = warta.json.minggu2.url;
+            // vid.src = warta.json.minggu2.url;
+            framew(warta.json.minggu2.isdrive, warta.json.minggu2.url);
         }
         else
         {
@@ -549,7 +554,8 @@ function mulai(pilwar) {
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu2.nama;
-            vid.src = warta.json.minggu2.url;
+            // vid.src = warta.json.minggu2.url;
+            framew(warta.json.minggu2.isdrive, warta.json.minggu2.url);
         }
 
         if(warta.json.warta_terbaru == "G03") {
@@ -571,7 +577,8 @@ function mulai(pilwar) {
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu3.nama;
-            vid.src = warta.json.minggu3.url;
+            // vid.src = warta.json.minggu3.url;
+            framew(warta.json.minggu3.isdrive, warta.json.minggu3.url);
         }
         else
         {
@@ -584,7 +591,8 @@ function mulai(pilwar) {
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu3.nama;
-            vid.src = warta.json.minggu3.url;
+            // vid.src = warta.json.minggu3.url;
+            framew(warta.json.minggu3.isdrive, warta.json.minggu3.url);
         }
 
         if(warta.json.warta_terbaru == "G04") {
@@ -606,7 +614,8 @@ function mulai(pilwar) {
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu4.nama;
-            vid.src = warta.json.minggu4.url;
+            // vid.src = warta.json.minggu4.url;
+            framew(warta.json.minggu4.isdrive, warta.json.minggu4.url);
         }
         else
         {
@@ -619,7 +628,8 @@ function mulai(pilwar) {
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu4.nama;
-            vid.src = warta.json.minggu4.url;
+            // vid.src = warta.json.minggu4.url;
+            framew(warta.json.minggu4.isdrive, warta.json.minggu4.url);
         }
 
         if(warta.json.warta_terbaru == "G05") {
@@ -641,7 +651,8 @@ function mulai(pilwar) {
             desdiv2.classList.add("n");
             desk1.innerHTML = "Sesi 1 - 3:";
             jdl.innerHTML = warta.json.minggu5.nama;
-            vid.src = warta.json.minggu5.url;
+            // vid.src = warta.json.minggu5.url;
+            framew(warta.json.minggu5.isdrive, warta.json.minggu5.url);
         }
         else
         {
@@ -654,7 +665,8 @@ function mulai(pilwar) {
             desdiv2.classList.remove("n");
             desk1.innerHTML = "Sesi 1 - 2:";
             jdl.innerHTML = warta.json.minggu5.nama;
-            vid.src = warta.json.minggu5.url;
+            // vid.src = warta.json.minggu5.url;
+            framew(warta.json.minggu5.isdrive, warta.json.minggu5.url);
         }
 
         if(warta.json.warta_terbaru == "G06") {
@@ -670,42 +682,54 @@ function mulai(pilwar) {
 function gantib(sesi) {
     if(sesi == '1-2') {
         if(pilwar_akhir == 0) {
-            vid.innerHTML = warta.json.minggu04.url;
+            // vid.innerHTML = warta.json.minggu04.url;
+            framew(warta.json.minggu04.isdrive, warta.json.minggu04.url);
         }
         else if(pilwar_akhir == 1) {
-            vid.innerHTML = warta.json.minggu1.url;
+            // vid.innerHTML = warta.json.minggu1.url;
+            framew(warta.json.minggu1.isdrive, warta.json.minggu1.url);
         }
         else if(pilwar_akhir == 2) {
-            vid.innerHTML = warta.json.minggu2.url;
+            // vid.innerHTML = warta.json.minggu2.url;
+            framew(warta.json.minggu2.isdrive, warta.json.minggu2.url);
         }
         else if(pilwar_akhir == 3) {
-            vid.innerHTML = warta.json.minggu3.url;
+            // vid.innerHTML = warta.json.minggu3.url;
+            framew(warta.json.minggu3.isdrive, warta.json.minggu3.url);
         }
         else if(pilwar_akhir == 4) {
-            vid.innerHTML = warta.json.minggu4.url;
+            // vid.innerHTML = warta.json.minggu4.url;
+            framew(warta.json.minggu4.isdrive, warta.json.minggu4.url);
         }
         else if(pilwar_akhir == 5) {
-            vid.innerHTML = warta.json.minggu5.url;
+            // vid.innerHTML = warta.json.minggu5.url;
+            framew(warta.json.minggu5.isdrive, warta.json.minggu5.url);
         }
     }
     if(sesi == '3') {
         if(pilwar_akhir == 0) {
-            vid.innerHTML = warta.json.minggu04.url2;
+            // vid.innerHTML = warta.json.minggu04.url2;
+            framew(warta.json.minggu04.isdrive, warta.json.minggu04.url2);
         }
         else if(pilwar_akhir == 1) {
-            vid.innerHTML = warta.json.minggu1.url2;
+            // vid.innerHTML = warta.json.minggu1.url2;
+            framew(warta.json.minggu1.isdrive, warta.json.minggu1.url2);
         }
         else if(pilwar_akhir == 2) {
-            vid.innerHTML = warta.json.minggu2.url2;
+            // vid.innerHTML = warta.json.minggu2.url2;
+            framew(warta.json.minggu2.isdrive, warta.json.minggu2.url2);
         }
         else if(pilwar_akhir == 3) {
-            vid.innerHTML = warta.json.minggu3.url2;
+            // vid.innerHTML = warta.json.minggu3.url2;
+            framew(warta.json.minggu3.isdrive, warta.json.minggu3.url2);
         }
         else if(pilwar_akhir == 4) {
-            vid.innerHTML = warta.json.minggu4.url2;
+            // vid.innerHTML = warta.json.minggu4.url2;
+            framew(warta.json.minggu4.isdrive, warta.json.minggu4.url2);
         }
         else if(pilwar_akhir == 5) {
-            vid.innerHTML = warta.json.minggu5.url2;
+            // vid.innerHTML = warta.json.minggu5.url2;
+            framew(warta.json.minggu5.isdrive, warta.json.minggu5.url2);
         }
     }
 }
@@ -837,20 +861,12 @@ function logout() {
 const parent_info = document.getElementById("parent_info");
 const isi_info = document.getElementById("isi_info");
 function tampil(data) {
-    var ada = 0;
-    if(data.info == "" || data.info == NaN || data.info == undefined || data.info == null || data.info == "0") {
-        // ada++;
-    }
-    else {
-        ada++;
-    }
-
-    if(ada > 0) {
-        isi_info.innerHTML = data.info;
-        parent_info.classList.remove("n");
-    }
-    else {
+    if(data == "" || data == NaN || data == undefined || data == null || data == "0") {
         parent_info.classList.add("n");
+    }
+    else {
+        isi_info.innerHTML = data;
+        parent_info.classList.remove("n");
     }
 }
 
@@ -908,7 +924,28 @@ setInterval(() => {
 
 }, 20);
 
+let ndrive;
+let ndrive_url;
+function framew(isdrive, url) {
+    vid.src = "";
+    if(isdrive == false) {
+        vid.src = "FRAME.html";
+        // vid.contentWindow.postMessage({ command: 'callFunction', data: url }, '*');
+        ndrive = false;
+        ndrive_url = url;
+    }
+    else {
+        vid.src = url;
+        ndrive = true;
+        ndrive_url = "";
+    }
+}
 
+vid.addEventListener('load', function() {
+    if(ndrive == false) {
+        vid.contentWindow.postMessage({ command: 'callFunction', data: ndrive_url }, '*');
+    }
+});
 
 //penting
 

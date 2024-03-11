@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description"
+    content="Website ini digunakan untuk preview video warta gereja GUP Harvest.">
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="theme-color" content="rgb(61, 61, 61)"/>
+    <title>Frame REPLAY Warta Gereja</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="webp/logoharvestssquare.webp"/>
+    <link rel="canonical"/>
+</head>
+<body>
+    <div class="countainer">
+        <video id="source" controls autoplay class="n">
+          Your browser does not support the video tag.
+        </video>
+        <iframe src=""
+        allow="autoplay" class="n" 
+        frameborder="0" allowfullscreen="true"
+        mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay" title="Pemutar video" id="source2" draggable="false"></iframe>
+    </div>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: sans-serif;
+            background-color: transparent;
+        }
+        .countainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .countainer video {
+            width: 100%;
+            height: 100%;
+        }
+        .countainer iframe {
+            width: 100%;
+            height: 100%;
+        }
+        .n {
+            display: none;
+        }
+    </style>
+    <script>
+        let num = 1;
+        function set(url) {
+            document.getElementById("source").src = url;
+        }
+        function set2(url) {
+            document.getElementById("source2").src = url;
+        }
+
+        function check(url) {
+            const source = document.getElementById("source");
+            const source2 = document.getElementById("source2");
+            let kos = "kosong1";
+
+            let urltest = "https://drive.google.com";
+            let salah = 0;
+            var splitsurltest = urltest.split("");
+            var splitsurl = url.split("");
+            for(let i = 0; i < urltest.length; i++) {
+                if(splitsurl[i] == splitsurltest[i]) {
+                    // kosong
+                }
+                else {
+                    salah++;
+                }
+            }
+
+            if(salah == 0) {
+                // console.log("drive");
+                set2(url);
+                source.classList.add("n");
+                source2.classList.remove("n");
+            }
+            else {
+                // console.log("firebase");
+                set(url);
+                source2.classList.add("n");
+                source.classList.remove("n");
+            }
+        }
+
+        //test
+
+        // check("https://drive.google.com/file/d/1khguF4CMaPHYVrTvO-W2Nj7dbuNMPJsT/preview");
+        // check("https://firebasestorage.googleapis.com/v0/b/gup-harvest.appspot.com/o/movie%2FWarta%20Gereja%2010%20Maret%202024%201.mp4?alt=media&token=26248207-7261-49e5-8d2b-89ff4f7d6e54");
+
+        window.addEventListener('message', function(event) {
+            if (event.data.command === 'callFunction') {
+                check(event.data.data);
+            }
+        });
+
+        source.classList.add("n");
+        source2.classList.add("n");
+
+
+        //penting
+            
+        setInterval(() => {
+            console.clear();
+        }, 20);
+        
+        
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        
+        function ctrlShiftKey(e, keyCode) {
+          return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+        
+        document.onkeydown = (e) => {
+          // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+          if (
+            event.keyCode === 123 ||
+            ctrlShiftKey(e, 'I') ||
+            ctrlShiftKey(e, 'J') ||
+            ctrlShiftKey(e, 'C') ||
+            (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+          )
+            return false;
+        };
+    </script>
+</body>
+</html>
