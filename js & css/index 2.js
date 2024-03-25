@@ -121,6 +121,7 @@ function loading() {
             loading_proses = false;
             sl.style.animation = "1.5s op ease";
             sl.style.opacity = "0";
+            gotop();
             setTimeout(function() {
                 sl.style.display = "none";
             }, 1500);
@@ -676,6 +677,7 @@ function mulai(pilwar) {
             terb_div.classList.add("n");
         }
     }
+    gotop();
     pilwar_akhir = pilwar;
 }
 
@@ -947,28 +949,38 @@ vid.addEventListener('load', function() {
     }
 });
 
-//penting
 
-setInterval(() => {
-    console.clear();
-}, 20);
-
-
-// Disable right-click
-document.addEventListener('contextmenu', (e) => e.preventDefault());
-
-function ctrlShiftKey(e, keyCode) {
-  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+function gotop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
 
-document.onkeydown = (e) => {
-  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
-  if (
-    event.keyCode === 123 ||
-    ctrlShiftKey(e, 'I') ||
-    ctrlShiftKey(e, 'J') ||
-    ctrlShiftKey(e, 'C') ||
-    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-  )
-    return false;
-};
+
+
+//penting
+
+// setInterval(() => {
+//     console.clear();
+// }, 20);
+
+
+// // Disable right-click
+// document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+// function ctrlShiftKey(e, keyCode) {
+//   return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+// }
+
+// document.onkeydown = (e) => {
+//   // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+//   if (
+//     event.keyCode === 123 ||
+//     ctrlShiftKey(e, 'I') ||
+//     ctrlShiftKey(e, 'J') ||
+//     ctrlShiftKey(e, 'C') ||
+//     (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+//   )
+//     return false;
+// };
